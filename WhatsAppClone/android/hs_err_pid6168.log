@@ -1,0 +1,215 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3469), pid=6168, tid=2312
+#
+# JRE version:  (17.0.1+12) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.1+12-LTS-39, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\assignment-2-mehmetyusufbayat\WhatsAppClone\node_modules\react-native-gesture-handler\android\build\20220923_16492165505401716754.compiler.options
+
+Host: Intel(R) Core(TM) i7-3630QM CPU @ 2.40GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+Time: Fri Sep 23 22:12:14 2022 Turkey Standard Time elapsed time: 0.023426 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000017504f5a390):  JavaThread "Unknown thread" [_thread_in_vm, id=2312, stack(0x0000001b98d00000,0x0000001b98e00000)]
+
+Stack: [0x0000001b98d00000,0x0000001b98e00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x66fa1a]
+V  [jvm.dll+0x7ce5a4]
+V  [jvm.dll+0x7cfd4e]
+V  [jvm.dll+0x7d03b3]
+V  [jvm.dll+0x242b05]
+V  [jvm.dll+0x66ca39]
+V  [jvm.dll+0x661502]
+V  [jvm.dll+0x30081b]
+V  [jvm.dll+0x307da6]
+V  [jvm.dll+0x357a1e]
+V  [jvm.dll+0x357c4f]
+V  [jvm.dll+0x2d7ad8]
+V  [jvm.dll+0x2d8a44]
+V  [jvm.dll+0x7a01e1]
+V  [jvm.dll+0x365791]
+V  [jvm.dll+0x77f6cc]
+V  [jvm.dll+0x3e812f]
+V  [jvm.dll+0x3e9bd1]
+C  [jli.dll+0x527b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffce6247818, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000017504f973a0 GCTaskThread "GC Thread#0" [stack: 0x0000001b98e00000,0x0000001b98f00000] [id=1240]
+  0x0000017504fa7fa0 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000001b98f00000,0x0000001b99000000] [id=9276]
+  0x0000017504fa9150 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000001b99000000,0x0000001b99100000] [id=13812]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffce5a984b7]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000017504f58800] Heap_lock - owner thread: 0x0000017504f5a390
+
+Heap address: 0x0000000081a00000, size: 2022 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000081a00000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffce5e78d89]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.009 Loaded shared library C:\Program Files\Java\jdk-17.0.1\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff73fde0000 - 0x00007ff73fdf0000 	C:\Program Files\Java\jdk-17.0.1\bin\java.exe
+0x00007ffd69fb0000 - 0x00007ffd6a1a8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffd687e0000 - 0x00007ffd6889d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffd67c00000 - 0x00007ffd67ece000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffd67800000 - 0x00007ffd67900000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffd5bf60000 - 0x00007ffd5bf78000 	C:\Program Files\Java\jdk-17.0.1\bin\jli.dll
+0x00007ffd58410000 - 0x00007ffd5842a000 	C:\Program Files\Java\jdk-17.0.1\bin\VCRUNTIME140.dll
+0x00007ffd69970000 - 0x00007ffd69a1e000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffd69500000 - 0x00007ffd6959e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffd68920000 - 0x00007ffd689bc000 	C:\Windows\System32\sechost.dll
+0x00007ffd68f20000 - 0x00007ffd69045000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffd697d0000 - 0x00007ffd69970000 	C:\Windows\System32\USER32.dll
+0x00007ffd67ed0000 - 0x00007ffd67ef2000 	C:\Windows\System32\win32u.dll
+0x00007ffd49c30000 - 0x00007ffd49eca000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffd69390000 - 0x00007ffd693ba000 	C:\Windows\System32\GDI32.dll
+0x00007ffd67900000 - 0x00007ffd67a0b000 	C:\Windows\System32\gdi32full.dll
+0x00007ffd67f70000 - 0x00007ffd6800d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffd5c5a0000 - 0x00007ffd5c5aa000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffd693c0000 - 0x00007ffd693f0000 	C:\Windows\System32\IMM32.DLL
+0x00007ffd60740000 - 0x00007ffd6074c000 	C:\Program Files\Java\jdk-17.0.1\bin\vcruntime140_1.dll
+0x00007ffd12e50000 - 0x00007ffd12edd000 	C:\Program Files\Java\jdk-17.0.1\bin\msvcp140.dll
+0x00007ffce57b0000 - 0x00007ffce636e000 	C:\Program Files\Java\jdk-17.0.1\bin\server\jvm.dll
+0x00007ffd694f0000 - 0x00007ffd694f8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffd413c0000 - 0x00007ffd413e7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffd62c30000 - 0x00007ffd62c39000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffd69f00000 - 0x00007ffd69f6b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffd654c0000 - 0x00007ffd654d2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffd5bf50000 - 0x00007ffd5bf5a000 	C:\Program Files\Java\jdk-17.0.1\bin\jimage.dll
+0x00007ffd62e20000 - 0x00007ffd63004000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffd62df0000 - 0x00007ffd62e1c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffd67a10000 - 0x00007ffd67a92000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffd583e0000 - 0x00007ffd58405000 	C:\Program Files\Java\jdk-17.0.1\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-17.0.1\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Java\jdk-17.0.1\bin\server
+
+VM Arguments:
+java_command: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\assignment-2-mehmetyusufbayat\WhatsAppClone\node_modules\react-native-gesture-handler\android\build\20220923_16492165505401716754.compiler.options
+java_class_path (initial): C:\Users\mehmetyusufbayat\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\1.5.20\1900e8b9aca0a9caffd45b99b36e3720a0a284f8\kotlin-compiler-embeddable-1.5.20.jar;C:\Users\mehmetyusufbayat\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.5.20\63810951f09a27f7827977f1bc21094042a915e\kotlin-reflect-1.5.20.jar;C:\Users\mehmetyusufbayat\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.5.20\9de35cc611bcecec8edce1d56d8e659953806751\kotlin-stdlib-1.5.20.jar;C:\Users\mehmetyusufbayat\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\1.5.20\4381bb58d37b84d4d1afe55ec35542dd9b77e101\kotlin-script-runtime-1.5.20.jar;C:\Users\mehmetyusufbayat\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-daemon-embeddable\1.5.20\36c38cda019834dcd2959cc33a12768adcd94256\kotlin-daemon-embeddable-1.5.20.jar;C:\Users\mehmetyusufbayat\.gradle\caches\modules-2\files-2.1\org.jetbrains.intellij.deps\trove4j\1.0.20181211\216c2e14b070f334479d800987affe4054cd563f\trove4j-1.0.20181211.jar;C:\Users\mehmetyusufbayat\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar;C:\Users\mehmetyusufbayat\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.5.20\3d79dbd48bf605f4aac1e7028981a1953e245cbb\kotlin-stdlib-common-1.5.20.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2120220672                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2120220672                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+CLASSPATH=C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\assignment-2-mehmetyusufbayat\WhatsAppClone\android\\gradle\wrapper\gradle-wrapper.jar
+PATH=C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\assignment-2-mehmetyusufbayat\WhatsAppClone\android\node_modules\.bin;C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\assignment-2-mehmetyusufbayat\WhatsAppClone\node_modules\.bin;C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\assignment-2-mehmetyusufbayat\node_modules\.bin;C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\node_modules\.bin;C:\Users\mehmetyusufbayat\Desktop\node_modules\.bin;C:\Users\mehmetyusufbayat\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Program Files\nodejs;C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\assignment-2-mehmetyusufbayat\WhatsAppClone\node_modules\.bin;C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\assignment-2-mehmetyusufbayat\node_modules\.bin;C:\Users\mehmetyusufbayat\Desktop\AKBANK Bootcamp\node_modules\.bin;C:\Users\mehmetyusufbayat\Desktop\node_modules\.bin;C:\Users\mehmetyusufbayat\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\MATLAB\R2021a\runtime\win64;C:\Program Files\MATLAB\R2021a\bin;C:\MinGW\bin;C:\Program Files\nodejs\;C:\Users\mehmetyusufbayat\AppData\Local\Microsoft\WindowsApps;C:\Users\mehmetyusufbayat\AppData
+USERNAME=mehmetyusufbayat
+LANG=en_US.UTF-8
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+OS uptime: 1 days 0:54 hours
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 58 stepping 9 microcode 0x21, cx8, cmov, fxsr, ht, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, tsc, tscinvbit, avx, aes, erms, clmul, vzeroupper, clflush
+
+Memory: 4k page, system-wide physical 8083M (419M free)
+TotalPageFile size 14614M (AvailPageFile size 77M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 60M, peak: 188M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.1+12-LTS-39) for windows-amd64 JRE (17.0.1+12-LTS-39), built on Sep 27 2021 18:41:35 by "mach5one" with MS VC++ 16.8 (VS2019)
+
+END.
